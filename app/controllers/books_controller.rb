@@ -5,17 +5,19 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params) # モデルにフォーム内容を渡す
+    @books = Book.all
     if @book.save                    # モデル経由でデータベースに保存
       redirect_to book_path(@book.id)
     else
-      render :new
+      render :index
     end
   end
 
   def index
     @books = Book.all # モデルを使って前レコードを取得
+    @book = Book.new # フォーム用の新規インスタンス
   end
-
+  
   def show
     @book = Book.find(params[:id])
   end
