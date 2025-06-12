@@ -7,3 +7,4 @@ class CreateBooks < ActiveRecord::Migration[6.1]
     end
   end
 end
+# ここでテーブル内容の作成をする　データベースの設計図ファイル
