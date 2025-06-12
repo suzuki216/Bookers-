@@ -6,7 +6,7 @@ class BooksController < ApplicationController
   def create
     book = Book.new(book_params) # モデルにフォーム内容を渡す
     book.save                    # モデル経由でデータベースに保存
-    redirect_to root_path
+    redirect_to book_path(book.id)
   end
 
   def index
@@ -14,6 +14,7 @@ class BooksController < ApplicationController
   end
 
   def show
+    @book = Book.find(params[:id])
   end
 
   def edit
