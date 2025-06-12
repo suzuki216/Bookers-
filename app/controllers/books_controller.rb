@@ -4,9 +4,12 @@ class BooksController < ApplicationController
   end
 
   def create
-    book = Book.new(book_params) # モデルにフォーム内容を渡す
-    book.save                    # モデル経由でデータベースに保存
-    redirect_to book_path(book.id)
+    @book = Book.new(book_params) # モデルにフォーム内容を渡す
+    if @book.save                    # モデル経由でデータベースに保存
+      redirect_to book_path(@book.id)
+    else
+      render :new
+    end
   end
 
   def index
@@ -19,12 +22,6 @@ class BooksController < ApplicationController
 
   def edit
     @book = Book.find(params[:id])
-  end
-
-  def update
-    book = Book.find(params[:id])
-    book.update(book_params)
-    redirect_to book_path(book.id)
   end
 
   def destroy
