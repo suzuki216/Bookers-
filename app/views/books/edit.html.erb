@@ -1,22 +1,36 @@
-<h1>Editing Book</h1>
-<% if @book.errors.any? %>
-  <%= @book.errors.count %> errors prohibited this book from being saved:
-  <ul>
-    <% @book.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %>
+<div class="edit-container">
+  <h1>Editing Book</h1>
 
-<%= form_with model: @book, local: true do |f| %>
-  <h4>Title</h4>
-  <%= f.text_field :title %>
+  <% if @book.errors.any? %>
+    <div class="error-messages">
+      <p><%= @book.errors.count %> errors prohibited this book from being saved:</p>
+      <ul>
+        <% @book.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-  <h4>Body</h4>
-  <%= f.text_area :body %>
+  <%= form_with model: @book, local: true do |f| %>
+    <div class="form-group">
+      <h4>Title</h4>
+      <%= f.text_field :title, class: "input-field" %>
+    </div>
 
-  <%= f.submit 'Update Book' %>
-  <%= link_to "Show", book_path(@book) %>  |
-  <%= link_to "Back", books_path %>
-<% end %>
+    <div class="form-group">
+      <h4>Body</h4>
+      <%= f.text_area :body, class: "textarea-field" %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit 'Update Book', class: "btn" %>
+    </div>
+
+    <div class="nav-links">
+      <%= link_to "Show", book_path(@book), class: "link" %> |
+      <%= link_to "Back", books_path, class: "link" %>
+    </div>
+  <% end %>
+</div>
 

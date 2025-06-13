@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2025_06_11_190125) do
 
   create_table "books", force: :cascade do |t|
-    t.string "title" #　テーブル作成　データベースに実際に保存される箱
+    t.string "title"
     t.string "body"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -13,3 +13,179 @@
  *= require_tree .
  *= require_self
  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+.welcome { /*トップページのcss*/
+  padding-top: 17px;
+  line-height: 1.8;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.welcome h2 {
+  font-size: 1.7em;
+  margin-left: 5px;
+}
+
+.welcome p {
+  font-size: 0.85em;
+  color: #444;
+  margin-left: 70px;
+  line-height: 3.8;
+}
+
+.start-link {
+  color: black;
+  display: inline; /* 文字幅ぴったりに背景を制限 */
+  font-size: 0.9em;
+  margin-left: 70px;
+  line-height: 3;
+}
+
+.start-link:visited {
+  color: gray; /* クリック済みはグレー */
+}
+
+.start-link:hover { /* カーソルを合わせた時　*/
+  background-color: black; /* 背景が黒 */
+  color: white; /* 文字が白 */
+}
+
+.notice { 
+  color: green;
+  padding: 25px 0;
+  padding-left: 60px;
+}
+
+.book-detail { /* 詳細画面のCss */
+  margin-left: 20px;
+}
+
+.field {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 0.9em;
+  padding-left: 60px;
+}
+.title-text {
+  padding-bottom: 20px;
+}
+
+
+.actions .btn {
+  color: black;
+  display: inline; 
+  font-size: 0.8em;
+  line-height: 5;
+}
+
+.edit-btn {
+  margin-left: 30px;
+}
+
+
+.actions .btn:visited {
+  color: gray;
+}
+
+.actions .btn:hover {
+  background-color: black; 
+  color: white;
+}
+
+
+
+.edit-container { /* 編集画面css*/
+  padding-top: 1em;
+  padding-left: 30px;
+  font-family: "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+}
+
+.edit-container h1,
+.edit-container h4,
+.edit-container p,
+.input-field,
+.textarea-field,
+.btn,
+.nav-links {
+  margin-bottom: 0.5em;
+}
+.edit-container h4 {
+  margin-bottom: 0.1em; 
+}
+
+.nav-links .link {
+  color: black;
+  display: inline; 
+}
+.nav-links .link:visited {
+  color: gray;
+}
+
+.nav-links .link:hover {
+  background-color: black; 
+  color: white;
+}
+
+h2 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 1.8em;
+  padding-left: 30px;
+  padding-bottom: 5px;
+}
+
+table {
+  padding: 0 30px;
+}
+
+.form {
+  padding-left: 30px;
+}
+
+.table-heading {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 0.9em;
+}
+
+.table-title {
+  font-size: 0.8em;
+  padding: 10px 15px;
+}
+
+.table-body {
+  font-size: 0.8em;
+}
+
+
+h3 {
+  font-family: "Helvetica Neue", sans-serif;
+  padding: 10px 0;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.create {
+  margin-top: 5px;
+}
+
+.action-3 {
+  font-size: 0.9em;
+  margin-right: 10px;
+  color: black;
+  display: inline; 
+
+}
+
+.action-3:visited {
+  color: gray;
+}
+
+.action-3:hover {
+  background-color: black; 
+  color: white;
+}
